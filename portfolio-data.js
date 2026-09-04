@@ -227,9 +227,8 @@ window.PORTFOLIO_DATA = {
       company: "Berkshire Grey",
       location: "Bedford, Massachusetts",
       period: "Jan 2024 – Jun 2024",
-      summary:
-        "Designed, prototyped, and validated robotic hardware and automated test systems for industrial pick-and-place platforms.",
       highlights: [
+        "Designed, prototyped, and validated robotic hardware and automated test systems for industrial pick-and-place platforms.",
         "Improved robotic system efficiency by approximately 15% through iterative EOAT and vacuum-valve development.",
         "Redesigned a production barcode-scanner bracket for an ABB IRB 1100, improving SKU detection accuracy by approximately 80%.",
         "Built a servo-driven lifecycle test rig and Python monitoring workflow with sensor data, automated analysis, and alerts."
@@ -240,9 +239,8 @@ window.PORTFOLIO_DATA = {
       company: "Symbionic Tech Pvt Ltd",
       location: "Chennai, India",
       period: "Apr 2022 – Jun 2022",
-      summary:
-        "Contributed to the mechanical development of a wearable upper-limb prosthetic arm with a focus on ergonomics, packaging, and integration.",
       highlights: [
+        "Contributed to the mechanical development of a wearable upper-limb prosthetic arm with a focus on ergonomics, packaging, and integration.",
         "Refined motor packaging and mount tolerances to reduce vibration by 10% and improve load distribution.",
         "Collaborated with medical and electrical teams on electrode placement, improving sensor data quality and overall performance by 30%.",
         "Used 3D-printed iterations to accelerate user feedback and reduce development time by 30%."
@@ -253,9 +251,8 @@ window.PORTFOLIO_DATA = {
       company: "Techecy",
       location: "India",
       period: "Jan 2021 – Dec 2021",
-      summary:
-        "Engineered plastic and sheet-metal components for consumer electronics from design review through prototype and manufacturing handoff.",
       highlights: [
+        "Engineered plastic and sheet-metal components for consumer electronics from design review through prototype and manufacturing handoff.",
         "Reduced tooling costs by 12% and pilot-run part rejections by 20% through DFM-focused design and supplier reviews.",
         "Improved heat dissipation efficiency by 22% using thermal and structural simulation.",
         "Supported BOMs, drawings, supplier negotiations, prototype builds, and corrective design actions."
@@ -266,9 +263,8 @@ window.PORTFOLIO_DATA = {
       company: "TVS Training and Services Ltd",
       location: "Chennai, India",
       period: "Sep 2020 – Oct 2020",
-      summary:
-        "Built practical knowledge of automotive manufacturing, quality inspection, and lean production methods.",
       highlights: [
+        "Built practical knowledge of automotive manufacturing, quality inspection, and lean production methods.",
         "Worked with CNC machining, welding, assembly processes, and standard metrology tools.",
         "Supported quality checks and root-cause analysis while reducing inspection time by 10%.",
         "Applied Kaizen and 5S principles in a production-oriented training environment."
