@@ -331,9 +331,10 @@ button {
 
 .hero-figure img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: 50% 12%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center center;
   background: var(--white);
   filter: saturate(0.95) contrast(1.02);
 }
