@@ -1237,6 +1237,10 @@ button {
 }
 
 .reveal {
+  opacity: 1;
+}
+
+.reveal.reveal-pending {
   opacity: 0;
 }
 

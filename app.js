@@ -139,19 +139,22 @@
     )
     .join("");
 
-  document.getElementById("skills-list").innerHTML = data.skillGroups
-    .map(
-      (group, index) => `
-        <div class="skill-group">
-          <div class="skill-index">0${index + 1}</div>
-          <div>
-            <h3>${escapeHTML(group.title)}</h3>
-            <p>${group.items.map(escapeHTML).join(" · ")}</p>
+  const skillsList = document.getElementById("skills-list");
+  if (skillsList) {
+    skillsList.innerHTML = data.skillGroups
+      .map(
+        (group, index) => `
+          <div class="skill-group">
+            <div class="skill-index">0${index + 1}</div>
+            <div>
+              <h3>${escapeHTML(group.title)}</h3>
+              <p>${group.items.map(escapeHTML).join(" · ")}</p>
+            </div>
           </div>
-        </div>
-      `
-    )
-    .join("");
+        `
+      )
+      .join("");
+  }
 
   document.getElementById("education-list").innerHTML = data.education
     .map(
@@ -343,15 +346,18 @@
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const revealItems = document.querySelectorAll(".reveal");
+  const canAnimate = !reduceMotion && "IntersectionObserver" in window;
 
-  if (reduceMotion || !("IntersectionObserver" in window)) {
+  if (!canAnimate) {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   } else {
+    revealItems.forEach((item) => item.classList.add("reveal-pending"));
     const revealObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           entry.target.classList.add("is-visible");
+          entry.target.classList.remove("reveal-pending");
           observer.unobserve(entry.target);
         });
       },
