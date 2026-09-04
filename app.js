@@ -28,9 +28,6 @@
   document.querySelectorAll("[data-headline]").forEach((node) => {
     node.textContent = profile.headline;
   });
-  document.querySelectorAll("[data-introduction]").forEach((node) => {
-    node.textContent = profile.introduction;
-  });
   document.querySelectorAll("[data-location]").forEach((node) => {
     node.textContent = profile.location;
   });
@@ -108,6 +105,10 @@
             <ul>
               ${item.highlights.map((highlight) => `<li>${escapeHTML(highlight)}</li>`).join("")}
             </ul>
+            <button class="text-button experience-button" type="button" data-experience-id="${escapeHTML(item.id)}">
+              Explore experience
+              <span aria-hidden="true">↗</span>
+            </button>
           </div>
         </article>
       `
@@ -118,11 +119,21 @@
     .map((paragraph) => `<p>${escapeHTML(paragraph)}</p>`)
     .join("");
 
-  document.getElementById("about-links").innerHTML = data.profile.links
+  const heroLinks = [
+    { label: "Download résumé", url: profile.resume, download: true },
+    ...profile.links.map((link) => ({ ...link, external: true }))
+  ];
+  document.getElementById("hero-links").innerHTML = heroLinks
     .map(
-      (link) => `
-        <a href="${escapeHTML(link.url)}" target="_blank" rel="noreferrer">
-          ${escapeHTML(link.label)} <span aria-hidden="true">↗</span>
+      (link, index) => `
+        <a
+          class="button ${index === 0 ? "button-primary" : "button-secondary"}"
+          href="${escapeHTML(link.url)}"
+          ${link.download ? "download" : ""}
+          ${link.external ? 'target="_blank" rel="noreferrer"' : ""}
+        >
+          ${escapeHTML(link.label)}
+          <span aria-hidden="true">↗</span>
         </a>
       `
     )
@@ -252,10 +263,66 @@
     dialog.querySelector(".dialog-close").focus();
   };
 
+
+  const openExperience = (item) => {
+    previousFocus = document.activeElement;
+    dialogContent.innerHTML = `
+      <article class="dialog-project dialog-experience">
+        <header class="experience-dialog-header">
+          <p class="section-kicker">Professional experience · ${escapeHTML(item.period)}</p>
+          <h2 id="dialog-title">${escapeHTML(item.role)}</h2>
+          <p>${escapeHTML(item.company)} · ${escapeHTML(item.location)}</p>
+        </header>
+
+        <section class="dialog-section experience-dialog-overview">
+          <p class="dialog-lead">${escapeHTML(item.summary)}</p>
+          <div>
+            <p class="dialog-label">Selected impact</p>
+            <ul class="detail-list">
+              ${item.highlights.map((highlight) => `<li>${escapeHTML(highlight)}</li>`).join("")}
+            </ul>
+          </div>
+        </section>
+
+        <section class="dialog-section">
+          <p class="dialog-label">Detailed engineering work</p>
+          <div class="experience-dialog-grid">
+            ${item.details
+              .map(
+                (detail) => `
+                  <article class="experience-dialog-card">
+                    <h3>${escapeHTML(detail.title)}</h3>
+                    <p>${escapeHTML(detail.description)}</p>
+                  </article>
+                `
+              )
+              .join("")}
+          </div>
+        </section>
+
+        <section class="dialog-section">
+          <p class="dialog-label">Tools & engineering areas</p>
+          <ul class="tag-list dialog-tags">
+            ${item.stack.map((tool) => `<li>${escapeHTML(tool)}</li>`).join("")}
+          </ul>
+        </section>
+      </article>
+    `;
+    dialog.showModal();
+    dialog.querySelector(".dialog-close").focus();
+  };
+
   document.querySelectorAll("[data-project-id]").forEach((button) => {
     button.addEventListener("click", () => {
       const project = data.projects.find((item) => item.id === button.dataset.projectId);
       if (project) openProject(project);
+    });
+  });
+
+  document.querySelectorAll("[data-experience-id]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const experience = data.experience.find((item) => item.id === button.dataset.experienceId);
+      if (experience) openExperience(experience);
     });
   });
 
