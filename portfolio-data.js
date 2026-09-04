@@ -6,7 +6,7 @@ window.PORTFOLIO_DATA = {
     eyebrow: "Mechanical Engineer · Mechatronics · Automation",
     headline: "Engineering physical systems from first sketch to validated hardware.",
     introduction:
-      "Mechanical engineer with 3+ years of experience across robotics, automation, product development, and manufacturing. I combine CAD, analysis, prototyping, controls, and testing to turn multi[...]",
+      "Mechanical engineer with 3+ years of experience across robotics, automation, product development, and manufacturing. I combine CAD, analysis, prototyping, controls, and testing to turn multi-disciplinary challenges into working hardware.",
     location: "Georgia, USA",
     email: "sriharish1108@gmail.com",
     resume: "Sri-Harish-Singaravelan-Resume.pdf",
@@ -22,12 +22,7 @@ window.PORTFOLIO_DATA = {
     ]
   },
 
-  metrics: [
-    { value: "3+", label: "Years in engineering" },
-    { value: "15%", label: "Robotic efficiency gain" },
-    { value: "80%", label: "SKU detection improvement" },
-    { value: "CSWP", label: "SOLIDWORKS Professional" }
-  ],
+  metrics: [],
 
   projects: [
     {
@@ -43,7 +38,7 @@ window.PORTFOLIO_DATA = {
       overview:
         "Developed a mobile robotic platform that uses 360° LiDAR and Hector SLAM to build a live 2D occupancy map in GPS-denied indoor environments.",
       challenge:
-        "Indoor localization cannot rely on GPS. The project required the sensing hardware, onboard computing, power, mobile platform, and mapping software to operate as one reliable system while [...]",
+        "Indoor localization cannot rely on GPS. The project required the sensing hardware, onboard computing, power, mobile platform, and mapping software to operate as one reliable system while managing real-world constraints like latency, power consumption, and sensor noise.",
       architecture: [
         "360° LiDAR",
         "Raspberry Pi 4",
@@ -120,7 +115,7 @@ window.PORTFOLIO_DATA = {
       overview:
         "Designed and built a mobile robot that senses obstacles, evaluates available space, and changes direction using embedded control and electromechanical actuation.",
       challenge:
-        "The goal was to create a complete feedback loop—not simply a vehicle following fixed commands. Sensing, decision logic, servo positioning, power distribution, and differential motor co[...]",
+        "The goal was to create a complete feedback loop—not simply a vehicle following fixed commands. Sensing, decision logic, servo positioning, power distribution, and differential motor control all had to work in concert to achieve real-time response.",
       architecture: [
         "HC-SR04 sensor",
         "Arduino Uno",
@@ -170,7 +165,7 @@ window.PORTFOLIO_DATA = {
       overview:
         "Led the mechanical design and CAD development of a lightweight custom quadcopter frame for an intercollegiate SAE Drone Racing competition.",
       challenge:
-        "A racing frame must balance low mass, stiffness, durability, component protection, manufacturability, and center-of-mass control. Every geometric decision affects both structural behavio[...]",
+        "A racing frame must balance low mass, stiffness, durability, component protection, manufacturability, and center-of-mass control. Every geometric decision affects both structural behavior and aerodynamic response—trade-offs must be made carefully and validated.",
       architecture: [
         "System requirements",
         "SolidWorks CAD",
@@ -273,8 +268,8 @@ window.PORTFOLIO_DATA = {
   ],
 
   about: [
-    "I am a systems-minded builder who began in mechanical engineering. Mechanical design is the foundation of how I solve problems, but I am most interested in the interfaces between hardware, r[...]",
-    "My approach is deliberately hands-on and iterative: understand the requirement, model the system, build a prototype, test it in the real world, learn from failure, and refine the design unti[...]",
+    "I am a systems-minded builder who began in mechanical engineering. Mechanical design is the foundation of how I solve problems, but I am most interested in the interfaces between hardware, robotics, controls, and real-world testing.",
+    "My approach is deliberately hands-on and iterative: understand the requirement, model the system, build a prototype, test it in the real world, learn from failure, and refine the design until it works reliably. I value precision, repeatability, and the satisfaction of holding something that actually works."
   ],
 
   skillGroups: [
