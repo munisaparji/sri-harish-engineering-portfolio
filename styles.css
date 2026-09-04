@@ -330,7 +330,7 @@ button {
 }
 
 .hero-figure img {
-  width: 10%;
+  width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: 50% 12%;
