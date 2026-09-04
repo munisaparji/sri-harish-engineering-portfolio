@@ -216,7 +216,7 @@ window.PORTFOLIO_DATA = {
       location: "Norcross, Georgia",
       period: "Aug 2025 – Present",
       summary:
-         "Designing facility systems and evaluating automation opportunities across manufacturing and distribution environments.",
+        "Designing facility systems and evaluating automation opportunities across manufacturing and distribution environments.",
       highlights: [
         "Simulate robotic automation workflows in RoboDK, integrating conveyors, pick-and-place robots, and vision systems to evaluate throughput and layouts.",
         "Develop HVAC, plumbing, ventilation, and fire-protection layouts in AutoCAD for production, office, IT, and distribution spaces.",
