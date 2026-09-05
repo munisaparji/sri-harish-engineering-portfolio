@@ -425,8 +425,8 @@ window.PORTFOLIO_DATA = {
       "company": "Symbionic Tech Pvt Ltd",
       "location": "Chennai, India",
       "period": "Apr 2022 – Jun 2022",
-      "summary": "Developed mechanical architecture, packaging, ergonomics, and prototypes for a wearable upper-limb prosthetic arm.",
       "highlights": [
+        "Developed mechanical architecture, packaging, ergonomics, and prototypes for a wearable upper-limb prosthetic arm.",
         "Refined motor packaging and mount tolerances to reduce vibration by 10% and improve load distribution.",
         "Collaborated with medical and electrical teams on electrode placement, improving sensor data quality and overall performance by 30%.",
         "Used 3D-printed iterations to accelerate user feedback and reduce development time by 30%."
