@@ -158,9 +158,9 @@ window.PORTFOLIO_DATA = {
       "period": "Sep 2024 – Dec 2024",
       "institution": "Northeastern University",
       "image": "assets/dc-motor-circuit.webp",
-      "imageAlt": "Circuit diagram from the DC motor position and speed control project report",
+      "imageAlt": "Arduino Uno, breadboard, H-bridge, encoder, and DC motor wiring diagram",
       "imageFit": "contain",
-      "mediaNote": "Project report preview",
+      "mediaNote": "Motor-control hardware wiring",
       "overview": "Developed and experimentally validated closed-loop position and speed control for a geared DC motor using Arduino Uno, encoder feedback, PWM, and MATLAB/Simulink Real-Time Target.",
       "challenge": "The work required connecting physical hardware behavior to a useful control model: characterizing the motor, converting encoder pulses into position and speed, identifying system dynamics, tuning proportional controllers, and explaining the differences between simulated and experimental response.",
       "architecture": [
@@ -200,7 +200,7 @@ window.PORTFOLIO_DATA = {
         {
           "type": "image",
           "src": "assets/dc-motor-circuit.webp",
-          "alt": "Arduino, H-bridge, potentiometer, encoder, and DC motor circuit diagram",
+          "alt": "Arduino Uno, breadboard, H-bridge, encoder, and DC motor wiring diagram",
           "title": "Hardware circuit and feedback path"
         },
         {
@@ -222,9 +222,9 @@ window.PORTFOLIO_DATA = {
       "period": "Sep 2024 – Dec 2024",
       "institution": "Northeastern University",
       "image": "assets/mems-system-overview.webp",
-      "imageAlt": "System overview from the MEMS glucose monitoring and insulin delivery project",
+      "imageAlt": "SolidWorks CAD rendering of the enclosed MEMS glucose-monitoring and insulin-delivery device",
       "imageFit": "contain",
-      "mediaNote": "Academic system design · report available",
+      "mediaNote": "Wearable device CAD concept · report available",
       "overview": "Explored the design of a closed-loop glucose-monitoring and automated insulin-delivery system that connects MEMS sensing, embedded processing, wireless communication, control modeling, and a piezoelectric micropump.",
       "challenge": "The central challenge was not an isolated sensor or pump; it was the complete feedback loop. Glucose measurement, computation, dose calculation, microfluidic delivery, device packaging, communication, and safety considerations had to be treated as one multidisciplinary system.",
       "architecture": [
@@ -263,8 +263,8 @@ window.PORTFOLIO_DATA = {
         {
           "type": "image",
           "src": "assets/mems-system-overview.webp",
-          "alt": "Four-part MEMS glucose monitoring system overview",
-          "title": "Integrated sensing and delivery architecture"
+          "alt": "SolidWorks CAD rendering of the enclosed MEMS glucose-monitoring and insulin-delivery device",
+          "title": "Enclosed wearable-device CAD concept"
         },
         {
           "type": "image",
