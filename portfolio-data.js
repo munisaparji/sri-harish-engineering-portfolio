@@ -333,8 +333,8 @@ window.PORTFOLIO_DATA = {
       "company": "Berkshire Grey",
       "location": "Bedford, Massachusetts",
       "period": "Jan 2024 – Jun 2024",
-      "summary": "Worked on robotic pick-and-place systems for warehouse automation across mechanical design, electrical integration, validation, and software-based test automation.",
       "highlights": [
+        "Worked on robotic pick-and-place systems for warehouse automation across mechanical design, electrical integration, validation, and software-based test automation.",
         "Improved robotic system efficiency by approximately 15% through iterative EOAT and vacuum-valve development.",
         "Redesigned a production barcode-scanner bracket for an ABB IRB 1100, improving SKU detection accuracy by approximately 80%.",
         "Built a servo-driven lifecycle test rig and Python monitoring workflow with sensor data, automated analysis, and Slack alerts."
@@ -503,8 +503,8 @@ window.PORTFOLIO_DATA = {
       "company": "Ole Mexican Foods",
       "location": "Norcross, Georgia",
       "period": "Aug 2025 – Present",
-      "summary": "Designing multidisciplinary facility systems and evaluating automation opportunities across manufacturing and distribution environments.",
       "highlights": [
+        "Designing multidisciplinary facility systems and evaluating automation opportunities across manufacturing and distribution environments.",
         "Simulate robotic automation workflows in RoboDK, integrating conveyors, pick-and-place robots, and vision systems to evaluate throughput and layouts.",
         "Develop HVAC, plumbing, ventilation, and fire-protection layouts in AutoCAD for production, office, IT, and distribution spaces.",
         "Coordinate construction-ready drawings and implementation with contractors, maintenance, vendors, and plant engineering teams."
@@ -542,8 +542,8 @@ window.PORTFOLIO_DATA = {
       "company": "Techecy",
       "location": "India",
       "period": "Jan 2021 – Dec 2021",
-      "summary": "Developed plastic and sheet-metal components for consumer electronics from design review through prototyping and manufacturing handoff.",
       "highlights": [
+        "Developed plastic and sheet-metal components for consumer electronics from design review through prototyping and manufacturing handoff.",
         "Reduced tooling costs by 12% and pilot-run part rejections by 20% through DFM-focused design and supplier reviews.",
         "Improved heat dissipation efficiency by 22% using thermal and structural simulation.",
         "Supported BOMs, drawings, supplier negotiations, prototype builds, and corrective design actions."
@@ -581,8 +581,8 @@ window.PORTFOLIO_DATA = {
       "company": "TVS Training and Services Ltd",
       "location": "Chennai, India",
       "period": "Sep 2020 – Oct 2020",
-      "summary": "Built practical experience in automotive manufacturing, quality inspection, machining, welding, assembly, and lean production.",
       "highlights": [
+        "Built practical experience in automotive manufacturing, quality inspection, machining, welding, assembly, and lean production.",
         "Worked with CNC machining, welding, assembly processes, and standard metrology tools.",
         "Supported quality checks and root-cause analysis while reducing inspection time by 10%.",
         "Applied Kaizen and 5S principles in a production-oriented training environment."
