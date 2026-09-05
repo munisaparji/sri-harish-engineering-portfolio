@@ -25,7 +25,9 @@
         </a>
         <nav class="main-nav" aria-label="Primary navigation">
           <a href="#work">Work</a>
+          <a href="#cad-models">CAD Models</a>
           <a href="#experience">Experience</a>
+          <a href="#about">About</a>
           <a href="#education">Education</a>
         </nav>
         <a class="header-contact" data-email-link href="mailto:sriharish1108@gmail.com">
@@ -40,7 +42,7 @@
         <div class="hero-copy reveal">
           <p class="eyebrow" data-eyebrow></p>
           <h1 id="hero-title" data-headline></h1>
-          <div class="hero-about" id="about-copy"></div>
+          <p class="hero-intro" data-introduction></p>
           <div class="hero-actions" id="hero-links" aria-label="Professional links"></div>
           <div class="hero-meta" aria-label="Contact and location">
             <span data-location></span>
@@ -82,6 +84,22 @@
         <div class="projects-grid" id="projects-grid"></div>
       </section>
 
+
+      <section class="cad-band" id="cad-models" aria-labelledby="cad-title">
+        <div class="section-shell section-block">
+          <header class="section-heading reveal">
+            <div>
+              <p class="section-kicker">Selected GrabCAD work</p>
+              <h2 id="cad-title">Models that show how I think in CAD.</h2>
+            </div>
+            <p>
+              A focused selection of mechanical assemblies and product-form studies. Only the strongest models are shown here.
+            </p>
+          </header>
+          <div class="cad-grid" id="cad-grid"></div>
+        </div>
+      </section>
+
       <section class="experience-band" id="experience" aria-labelledby="experience-title">
         <div class="section-shell section-block">
           <header class="section-heading section-heading-light reveal">
@@ -90,10 +108,26 @@
               <h2 id="experience-title">Design across the full engineering cycle.</h2>
             </div>
             <p>
-              From facilities and robotic automation to prosthetics, consumer products, and manufacturing.
+              Leading with real-world mechatronics at Berkshire Grey and human-centered product development at Symbionic Tech.
             </p>
           </header>
           <div class="experience-list" id="experience-list"></div>
+        </div>
+      </section>
+
+
+      <section class="section-shell section-block about-grid" id="about" aria-labelledby="about-title">
+        <div class="about-copy reveal">
+          <p class="section-kicker">About me</p>
+          <h2 id="about-title">A systems-minded builder with a mechanical foundation.</h2>
+          <div id="about-copy"></div>
+        </div>
+        <div class="skills-panel reveal" data-reveal-delay="1">
+          <div class="panel-heading">
+            <span>Engineering toolkit</span>
+            <span aria-hidden="true">05 disciplines</span>
+          </div>
+          <div id="skills-list"></div>
         </div>
       </section>
 

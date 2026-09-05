@@ -28,6 +28,9 @@
   document.querySelectorAll("[data-headline]").forEach((node) => {
     node.textContent = profile.headline;
   });
+  document.querySelectorAll("[data-introduction]").forEach((node) => {
+    node.textContent = profile.introduction;
+  });
   document.querySelectorAll("[data-location]").forEach((node) => {
     node.textContent = profile.location;
   });
@@ -58,6 +61,7 @@
         <article class="project-card ${index === 0 ? "project-card-featured" : ""} reveal" data-reveal-delay="${index % 2}">
           <div class="project-media">
             <img
+              class="${project.imageFit === "contain" ? "media-contain" : ""}"
               src="${escapeHTML(project.image)}"
               alt="${escapeHTML(project.imageAlt)}"
               loading="${index === 0 ? "eager" : "lazy"}"
@@ -72,6 +76,7 @@
               <span>${escapeHTML(project.institution)}</span>
               <span>${escapeHTML(project.period)}</span>
             </div>
+            <p class="focus-badge">${escapeHTML(project.focus)}</p>
             <h3>${escapeHTML(project.title)}</h3>
             <p class="project-subtitle">${escapeHTML(project.subtitle)}</p>
             <p class="project-overview">${escapeHTML(project.overview)}</p>
@@ -91,12 +96,33 @@
     )
     .join("");
 
+  document.getElementById("cad-grid").innerHTML = data.cadModels
+    .map(
+      (model, index) => `
+        <article class="cad-card reveal" data-reveal-delay="${index}">
+          <div class="cad-media">
+            <img src="${escapeHTML(model.image)}" alt="${escapeHTML(model.imageAlt)}" loading="lazy" />
+          </div>
+          <div class="cad-body">
+            <p class="focus-badge">${escapeHTML(model.focus)}</p>
+            <h3>${escapeHTML(model.title)}</h3>
+            <p>${escapeHTML(model.description)}</p>
+            <a class="text-button cad-link" href="${escapeHTML(model.url)}" target="_blank" rel="noreferrer">
+              View on GrabCAD <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+      `
+    )
+    .join("");
+
   document.getElementById("experience-list").innerHTML = data.experience
     .map(
       (item, index) => `
         <article class="experience-item reveal" data-reveal-delay="${index % 2}">
           <div class="experience-period">${escapeHTML(item.period)}</div>
           <div class="experience-role">
+            <p class="focus-badge focus-badge-dark">${escapeHTML(item.focus)}</p>
             <h3>${escapeHTML(item.role)}</h3>
             <p>${escapeHTML(item.company)} · ${escapeHTML(item.location)}</p>
           </div>
@@ -175,7 +201,16 @@
     .join("");
 
   document.getElementById("certification-list").innerHTML = data.certifications
-    .map((item) => `<li>${escapeHTML(item)}</li>`)
+    .map(
+      (item) => `
+        <li>
+          <a href="${escapeHTML(item.url)}" target="_blank" rel="noreferrer">
+            <span>${escapeHTML(item.label)}</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </li>
+      `
+    )
     .join("");
 
   document.getElementById("current-year").textContent = new Date().getFullYear();
@@ -199,6 +234,7 @@
     return `
       <figure class="dialog-media-item">
         <img src="${escapeHTML(item.src)}" alt="${escapeHTML(item.alt)}" loading="lazy" />
+        ${item.title ? `<figcaption>${escapeHTML(item.title)}</figcaption>` : ""}
       </figure>
     `;
   };
@@ -210,11 +246,12 @@
         <header class="dialog-hero">
           <div class="dialog-hero-copy">
             <p class="section-kicker">Project ${escapeHTML(project.number)} · ${escapeHTML(project.period)}</p>
+            <p class="focus-badge">${escapeHTML(project.focus)}</p>
             <h2 id="dialog-title">${escapeHTML(project.title)}</h2>
             <p>${escapeHTML(project.subtitle)}</p>
             <div class="dialog-meta">${escapeHTML(project.institution)} · ${escapeHTML(project.mediaNote)}</div>
           </div>
-          <img src="${escapeHTML(project.image)}" alt="${escapeHTML(project.imageAlt)}" />
+          <img class="${project.imageFit === "contain" ? "media-contain" : ""}" src="${escapeHTML(project.image)}" alt="${escapeHTML(project.imageAlt)}" />
         </header>
 
         <div class="dialog-section dialog-overview">
@@ -254,6 +291,20 @@
           </ul>
         </section>
 
+        ${
+          project.documentUrl
+            ? `
+              <section class="dialog-section project-document">
+                <p class="dialog-label">Project documentation</p>
+                <a href="${escapeHTML(project.documentUrl)}" target="_blank" rel="noreferrer">
+                  ${escapeHTML(project.documentLabel || "Read the complete project report")}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </section>
+            `
+            : ""
+        }
+
         <section class="dialog-section">
           <p class="dialog-label">Project media</p>
           <div class="dialog-gallery ${project.gallery.length === 1 ? "dialog-gallery-single" : ""}">
@@ -273,9 +324,29 @@
       <article class="dialog-project dialog-experience">
         <header class="experience-dialog-header">
           <p class="section-kicker">Professional experience · ${escapeHTML(item.period)}</p>
+          <p class="focus-badge">${escapeHTML(item.focus)}</p>
           <h2 id="dialog-title">${escapeHTML(item.role)}</h2>
           <p>${escapeHTML(item.company)} · ${escapeHTML(item.location)}</p>
         </header>
+
+        ${
+          item.metrics?.length
+            ? `
+              <section class="dialog-section experience-metrics" aria-label="Key metrics">
+                ${item.metrics
+                  .map(
+                    (metric) => `
+                      <div class="experience-metric">
+                        <strong>${escapeHTML(metric.value)}</strong>
+                        <span>${escapeHTML(metric.label)}</span>
+                      </div>
+                    `
+                  )
+                  .join("")}
+              </section>
+            `
+            : ""
+        }
 
         <section class="dialog-section experience-dialog-overview">
           <p class="dialog-lead">${escapeHTML(item.summary)}</p>
@@ -302,6 +373,19 @@
               .join("")}
           </div>
         </section>
+
+        ${
+          item.gallery?.length
+            ? `
+              <section class="dialog-section">
+                <p class="dialog-label">Engineering in practice</p>
+                <div class="dialog-gallery experience-gallery">
+                  ${item.gallery.map(renderGalleryItem).join("")}
+                </div>
+              </section>
+            `
+            : ""
+        }
 
         <section class="dialog-section">
           <p class="dialog-label">Tools & engineering areas</p>

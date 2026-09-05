@@ -4,7 +4,7 @@ window.PORTFOLIO_DATA = {
     "name": "Sri Harish Singaravelan",
     "initials": "SH",
     "eyebrow": "Mechanical Design · Mechatronics Engineer · Robotics",
-    "headline": "A systems-minded builder with a mechanical foundation.",
+    "headline": "I design, build, and test mechanical systems that bridge hardware, robotics, and automation.",
     "location": "Boston, USA",
     "email": "sriharish1108@gmail.com",
     "resume": "Sri-Harish-Singaravelan-Resume.pdf",
@@ -17,14 +17,15 @@ window.PORTFOLIO_DATA = {
         "label": "GrabCAD",
         "url": "https://grabcad.com/sri.harish.singaravelan-1/models"
       }
-    ]
+    ],
+    "introduction": "I'm Sri Harish, a Mechanical Design and Mechatronics Engineer with experience across robotics, automation, and product development. My work spans mechanical design, prototyping, electromechanical integration, and testing. I particularly like taking ideas from CAD and early concepts to physical systems that can be built, tested, improved, and deployed in real-world conditions."
   },
   "metrics": [],
   "projects": [
     {
       "id": "lidar-mapping",
       "number": "01",
-      "title": "LiDAR-Based Indoor Spatial Mapping",
+      "title": "LiDAR Indoor Mapping Robot",
       "subtitle": "Mobile robotic mapping using ROS, Hector SLAM, and Raspberry Pi",
       "period": "Oct 2023 – Dec 2023",
       "institution": "Northeastern University",
@@ -94,11 +95,190 @@ window.PORTFOLIO_DATA = {
           "src": "assets/lidar-drive-test.mp4",
           "title": "Mobile platform drive test"
         }
-      ]
+      ],
+      "focus": "Robotics + fabrication"
+    },
+    {
+      "id": "sae-quadcopter",
+      "number": "02",
+      "title": "SAE Racing Quadcopter",
+      "subtitle": "Mechanical design, structural analysis, and optimization of a competition frame",
+      "period": "Jan 2022 – May 2022",
+      "institution": "LICET",
+      "image": "assets/sae-racing-quadcopter.webp",
+      "imageAlt": "SolidWorks CAD render of Sri Harish's SAE racing quadcopter frame",
+      "mediaNote": "Original CAD render",
+      "overview": "Led the mechanical design and CAD development of a lightweight custom quadcopter frame for an intercollegiate SAE Drone Racing competition.",
+      "challenge": "A racing frame must balance low mass, stiffness, durability, component protection, manufacturability, and center-of-mass control. Every geometric decision affects both structural behavior and aerodynamic response—trade-offs must be made carefully and validated.",
+      "architecture": [
+        "System requirements",
+        "SolidWorks CAD",
+        "Component packaging",
+        "FEA",
+        "Design iteration",
+        "Competition frame"
+      ],
+      "outcomes": [
+        "Developed the frame architecture from the ground up in SolidWorks.",
+        "Used FEA findings to guide structural and geometric improvements.",
+        "Improved estimated drone responsiveness by 20% through weight-distribution optimization.",
+        "Delivered a competition-ready design while protecting team intellectual property."
+      ],
+      "contributions": [
+        "Helped establish the SAE Drone Racing team at LICET.",
+        "Led frame CAD, structural layout, and packaging of major vehicle components.",
+        "Performed FEA and presented design recommendations in engineering reviews.",
+        "Iterated geometry around stiffness, weight, propulsion hardware, and assembly requirements."
+      ],
+      "stack": [
+        "SolidWorks",
+        "FEA",
+        "Mechanical design",
+        "Structural analysis",
+        "Component packaging",
+        "Design optimization"
+      ],
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/sae-racing-quadcopter.webp",
+          "alt": "SolidWorks CAD render of the SAE racing quadcopter",
+          "title": "Competition quadcopter CAD"
+        }
+      ],
+      "focus": "Mechanical design",
+      "imageFit": "contain"
+    },
+    {
+      "id": "dc-motor-control",
+      "number": "03",
+      "title": "DC Motor Position & Speed Control",
+      "subtitle": "Hardware characterization, system modeling, and feedback control using Arduino and MATLAB/Simulink",
+      "focus": "Controls",
+      "period": "Sep 2024 – Dec 2024",
+      "institution": "Northeastern University",
+      "image": "assets/dc-motor-circuit.webp",
+      "imageAlt": "Circuit diagram from the DC motor position and speed control project report",
+      "imageFit": "contain",
+      "mediaNote": "Project report preview",
+      "overview": "Developed and experimentally validated closed-loop position and speed control for a geared DC motor using Arduino Uno, encoder feedback, PWM, and MATLAB/Simulink Real-Time Target.",
+      "challenge": "The work required connecting physical hardware behavior to a useful control model: characterizing the motor, converting encoder pulses into position and speed, identifying system dynamics, tuning proportional controllers, and explaining the differences between simulated and experimental response.",
+      "architecture": [
+        "Potentiometer reference input",
+        "Arduino Uno and Simulink Real-Time Target",
+        "Proportional controller",
+        "PWM and L293x H-bridge",
+        "Pololu 25D geared DC motor",
+        "Encoder feedback"
+      ],
+      "outcomes": [
+        "Measured motor response at 25%, 50%, 75%, and 100% PWM duty cycles, reaching approximately 31 RPM at full duty.",
+        "Developed a first-order transfer-function approximation, G(s) = 4.61 / (0.123s + 1), from experimental behavior.",
+        "Matched simulated steady-state speed at approximately 30.76 RPM against the measured 31 RPM.",
+        "Selected Kp = 20 for position control and Kp = 35 for speed control after comparing tracking error, overshoot, and oscillation."
+      ],
+      "contributions": [
+        "Integrated the DC gearmotor, encoder, Arduino Uno, H-bridge, potentiometer, and external power supply.",
+        "Calculated real-time angular position and rotational velocity from encoder feedback.",
+        "Built the Simulink and Simscape models and compared them with the physical motor.",
+        "Implemented and tuned proportional position and speed controllers.",
+        "Investigated the effect of gearbox friction, motor characteristics, and controller gain on real-world response."
+      ],
+      "stack": [
+        "MATLAB",
+        "Simulink",
+        "Simscape",
+        "Arduino Uno",
+        "Real-Time Target",
+        "Encoder",
+        "H-bridge",
+        "PWM",
+        "System identification",
+        "P-control"
+      ],
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/dc-motor-circuit.webp",
+          "alt": "Arduino, H-bridge, potentiometer, encoder, and DC motor circuit diagram",
+          "title": "Hardware circuit and feedback path"
+        },
+        {
+          "type": "image",
+          "src": "assets/dc-motor-speed-control.webp",
+          "alt": "Simscape speed-control model and response plot",
+          "title": "Closed-loop speed-control model"
+        }
+      ],
+      "documentUrl": "documents/dc-motor-position-speed-control-report.pdf",
+      "documentLabel": "Read the complete DC motor project report"
+    },
+    {
+      "id": "mems-glucose-system",
+      "number": "04",
+      "title": "MEMS Glucose Monitoring & Insulin Delivery",
+      "subtitle": "Closed-loop biomedical system integrating MEMS sensing, embedded control, and micropump delivery",
+      "focus": "Multidisciplinary systems",
+      "period": "Sep 2024 – Dec 2024",
+      "institution": "Northeastern University",
+      "image": "assets/mems-system-overview.webp",
+      "imageAlt": "System overview from the MEMS glucose monitoring and insulin delivery project",
+      "imageFit": "contain",
+      "mediaNote": "Academic system design · report available",
+      "overview": "Explored the design of a closed-loop glucose-monitoring and automated insulin-delivery system that connects MEMS sensing, embedded processing, wireless communication, control modeling, and a piezoelectric micropump.",
+      "challenge": "The central challenge was not an isolated sensor or pump; it was the complete feedback loop. Glucose measurement, computation, dose calculation, microfluidic delivery, device packaging, communication, and safety considerations had to be treated as one multidisciplinary system.",
+      "architecture": [
+        "MEMS affinity glucose sensor",
+        "ESP32 embedded controller",
+        "Bergman Minimal Model",
+        "PID control and dose calculation",
+        "Piezoelectric micropump and microneedle",
+        "Continuous feedback and wireless communication"
+      ],
+      "outcomes": [
+        "Defined an end-to-end sensing, computation, control, and actuation architecture.",
+        "Modeled glucose-insulin dynamics using the Bergman Minimal Model and PID-based regulation.",
+        "Studied a MEMS cantilever sensor concept and its Parylene, photolithography, electroplating, and XeF₂ release process.",
+        "Evaluated simulated glucose scenarios, meal-related changes, basal dosing, and dynamic controller response."
+      ],
+      "contributions": [
+        "Contributed to the system architecture connecting the MEMS sensor, ESP32, controller, wireless link, micropump, and delivery interface.",
+        "Examined how microscale mechanical behavior could support glucose sensing.",
+        "Supported mathematical modeling and PID-control analysis for adaptive insulin delivery.",
+        "Connected sensor fabrication, embedded processing, microfluidics, and biomedical packaging into a single design study."
+      ],
+      "stack": [
+        "MEMS",
+        "ESP32",
+        "PID control",
+        "Bergman Minimal Model",
+        "Piezoelectric micropump",
+        "CGM",
+        "Bluetooth",
+        "Microfluidics",
+        "Parylene",
+        "Photolithography"
+      ],
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/mems-system-overview.webp",
+          "alt": "Four-part MEMS glucose monitoring system overview",
+          "title": "Integrated sensing and delivery architecture"
+        },
+        {
+          "type": "image",
+          "src": "assets/mems-control-results.webp",
+          "alt": "Simulated glucose response with PID control and basal dosing",
+          "title": "PID-control simulation results"
+        }
+      ],
+      "documentUrl": "documents/mems-glucose-insulin-delivery-report.pdf",
+      "documentLabel": "Read the complete MEMS system project report"
     },
     {
       "id": "obstacle-robot",
-      "number": "02",
+      "number": "05",
       "title": "Arduino Obstacle-Avoiding Robot",
       "subtitle": "Real-time sense–decide–act control on a mobile robotic platform",
       "period": "Jan 2022 – May 2022",
@@ -142,94 +322,11 @@ window.PORTFOLIO_DATA = {
           "src": "assets/obstacle-robot.webp",
           "alt": "Representative visualization of the Arduino obstacle-avoiding robot"
         }
-      ]
-    },
-    {
-      "id": "sae-quadcopter",
-      "number": "03",
-      "title": "SAE Drone Racing Quadcopter",
-      "subtitle": "Mechanical design, structural analysis, and optimization of a competition frame",
-      "period": "Jan 2022 – May 2022",
-      "institution": "LICET",
-      "image": "assets/sae-quadcopter.webp",
-      "imageAlt": "Representative engineering visualization of a custom racing quadcopter prototype",
-      "mediaNote": "Representative visualization; complete competition CAD remains confidential",
-      "overview": "Led the mechanical design and CAD development of a lightweight custom quadcopter frame for an intercollegiate SAE Drone Racing competition.",
-      "challenge": "A racing frame must balance low mass, stiffness, durability, component protection, manufacturability, and center-of-mass control. Every geometric decision affects both structural behavior and aerodynamic response—trade-offs must be made carefully and validated.",
-      "architecture": [
-        "System requirements",
-        "SolidWorks CAD",
-        "Component packaging",
-        "FEA",
-        "Design iteration",
-        "Competition frame"
       ],
-      "outcomes": [
-        "Developed the frame architecture from the ground up in SolidWorks.",
-        "Used FEA findings to guide structural and geometric improvements.",
-        "Improved estimated drone responsiveness by 20% through weight-distribution optimization.",
-        "Delivered a competition-ready design while protecting team intellectual property."
-      ],
-      "contributions": [
-        "Helped establish the SAE Drone Racing team at LICET.",
-        "Led frame CAD, structural layout, and packaging of major vehicle components.",
-        "Performed FEA and presented design recommendations in engineering reviews.",
-        "Iterated geometry around stiffness, weight, propulsion hardware, and assembly requirements."
-      ],
-      "stack": [
-        "SolidWorks",
-        "FEA",
-        "Mechanical design",
-        "Structural analysis",
-        "Component packaging",
-        "Design optimization"
-      ],
-      "gallery": [
-        {
-          "type": "image",
-          "src": "assets/sae-quadcopter.webp",
-          "alt": "Representative visualization of the SAE racing quadcopter"
-        }
-      ]
+      "focus": "Electronics + embedded"
     }
   ],
   "experience": [
-    {
-      "id": "ole-mexican-foods",
-      "role": "MEP Mechanical Designer",
-      "company": "Ole Mexican Foods",
-      "location": "Norcross, Georgia",
-      "period": "Aug 2025 – Present",
-      "summary": "Designing multidisciplinary facility systems and evaluating automation opportunities across manufacturing and distribution environments.",
-      "highlights": [
-        "Simulate robotic automation workflows in RoboDK, integrating conveyors, pick-and-place robots, and vision systems to evaluate throughput and layouts.",
-        "Develop HVAC, plumbing, ventilation, and fire-protection layouts in AutoCAD for production, office, IT, and distribution spaces.",
-        "Coordinate construction-ready drawings and implementation with contractors, maintenance, vendors, and plant engineering teams."
-      ],
-      "details": [
-        {
-          "title": "Robotic automation simulation",
-          "description": "Build and evaluate RoboDK simulations that connect conveyors, pick-and-place robots, and vision systems so layout options and expected throughput can be reviewed before implementation."
-        },
-        {
-          "title": "Facility systems design",
-          "description": "Develop coordinated HVAC, plumbing, ventilation, and fire-protection layouts in AutoCAD for production, office, IT, and distribution environments."
-        },
-        {
-          "title": "Engineering coordination",
-          "description": "Prepare construction-ready drawings and work with contractors, maintenance teams, vendors, and plant engineers to move designs toward implementation."
-        }
-      ],
-      "stack": [
-        "RoboDK",
-        "AutoCAD",
-        "Robotic automation",
-        "HVAC",
-        "Plumbing",
-        "Fire protection",
-        "Facility design"
-      ]
-    },
     {
       "id": "berkshire-grey",
       "role": "Mechatronics Intern",
@@ -275,6 +372,51 @@ window.PORTFOLIO_DATA = {
         "ePLC",
         "Teamcenter",
         "Omnify PLM"
+      ],
+      "focus": "Real-world mechatronics",
+      "metrics": [
+        {
+          "value": "~80%",
+          "label": "SKU detection improvement"
+        },
+        {
+          "value": "~15%",
+          "label": "Cycle-time reduction"
+        },
+        {
+          "value": "100+",
+          "label": "Validation cycles"
+        },
+        {
+          "value": "~30%",
+          "label": "Validation/data accuracy improvement"
+        }
+      ],
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/berkshire-butterfly-valve-1.webp",
+          "alt": "Butterfly valve prototype mounted on a test actuator",
+          "title": "Butterfly valve prototype test"
+        },
+        {
+          "type": "image",
+          "src": "assets/berkshire-butterfly-valve-2.webp",
+          "alt": "Butterfly valve test setup beside a control laptop",
+          "title": "Valve validation setup"
+        },
+        {
+          "type": "image",
+          "src": "assets/berkshire-poppet-valve-1.webp",
+          "alt": "Poppet valve and motor assembly on a workbench",
+          "title": "Poppet-valve actuator assembly"
+        },
+        {
+          "type": "image",
+          "src": "assets/berkshire-poppet-valve-2.webp",
+          "alt": "Installed poppet valve prototype and actuator",
+          "title": "Installed valve prototype"
+        }
       ]
     },
     {
@@ -320,7 +462,79 @@ window.PORTFOLIO_DATA = {
         "3D printing",
         "Sensor integration",
         "Omnify PLM"
+      ],
+      "focus": "Human-centered mechanical product development",
+      "metrics": [
+        {
+          "value": "~10%",
+          "label": "Vibration reduction"
+        },
+        {
+          "value": "~30%",
+          "label": "Sensor data quality improvement"
+        },
+        {
+          "value": "~30%",
+          "label": "Development-time reduction"
+        },
+        {
+          "value": "~20%",
+          "label": "Usability improvement"
+        }
+      ],
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/symbionic-palm-workshop.webp",
+          "alt": "Sri Harish assembling and testing a prosthetic palm in the workshop",
+          "title": "Prosthetic palm assembly and testing"
+        },
+        {
+          "type": "image",
+          "src": "assets/symbionic-finger-mould.webp",
+          "alt": "Prototype prosthetic finger mould on the workbench",
+          "title": "Prototype finger mould"
+        }
       ]
+    },
+    {
+      "id": "ole-mexican-foods",
+      "role": "MEP Mechanical Designer",
+      "company": "Ole Mexican Foods",
+      "location": "Norcross, Georgia",
+      "period": "Aug 2025 – Present",
+      "summary": "Designing multidisciplinary facility systems and evaluating automation opportunities across manufacturing and distribution environments.",
+      "highlights": [
+        "Simulate robotic automation workflows in RoboDK, integrating conveyors, pick-and-place robots, and vision systems to evaluate throughput and layouts.",
+        "Develop HVAC, plumbing, ventilation, and fire-protection layouts in AutoCAD for production, office, IT, and distribution spaces.",
+        "Coordinate construction-ready drawings and implementation with contractors, maintenance, vendors, and plant engineering teams."
+      ],
+      "details": [
+        {
+          "title": "Robotic automation simulation",
+          "description": "Build and evaluate RoboDK simulations that connect conveyors, pick-and-place robots, and vision systems so layout options and expected throughput can be reviewed before implementation."
+        },
+        {
+          "title": "Facility systems design",
+          "description": "Develop coordinated HVAC, plumbing, ventilation, and fire-protection layouts in AutoCAD for production, office, IT, and distribution environments."
+        },
+        {
+          "title": "Engineering coordination",
+          "description": "Prepare construction-ready drawings and work with contractors, maintenance teams, vendors, and plant engineers to move designs toward implementation."
+        }
+      ],
+      "stack": [
+        "RoboDK",
+        "AutoCAD",
+        "Robotic automation",
+        "HVAC",
+        "Plumbing",
+        "Fire protection",
+        "Facility design"
+      ],
+      "focus": "Industrial automation + facility engineering",
+      "metrics": [],
+      "gallery": []
     },
     {
       "id": "techecy",
@@ -356,7 +570,10 @@ window.PORTFOLIO_DATA = {
         "Thermal analysis",
         "Structural simulation",
         "BOM"
-      ]
+      ],
+      "focus": "Design for manufacturing",
+      "metrics": [],
+      "gallery": []
     },
     {
       "id": "tvs-training",
@@ -393,7 +610,10 @@ window.PORTFOLIO_DATA = {
         "Root-cause analysis",
         "Kaizen",
         "5S"
-      ]
+      ],
+      "focus": "Manufacturing + quality",
+      "metrics": [],
+      "gallery": []
     }
   ],
   "about": [
@@ -491,11 +711,47 @@ window.PORTFOLIO_DATA = {
     }
   ],
   "certifications": [
-    "Certified SOLIDWORKS Professional — Dassault Systèmes",
-    "Arduino: Foundations",
-    "SOLIDWORKS: SimulationXpress",
-    "MATLAB — MathWorks",
-    "ANSYS Workbench",
-    "Python"
+    {
+      "label": "Certified SOLIDWORKS Professional (CSWP) — Dassault Systèmes",
+      "url": "https://pdfhost.io/v/QVuP3FvkPE_SolidWorks_Professional_Certification"
+    },
+    {
+      "label": "Arduino: Foundations",
+      "url": "https://www.linkedin.com/learning/certificates/dda7fd915e290b3c2a3a0f0d653940f2b9108461fe536465e091d7271af54009"
+    },
+    {
+      "label": "SOLIDWORKS: SimulationXpress",
+      "url": "https://www.linkedin.com/learning/certificates/9466c5b23f9ab95ec585a8a3d34531b366c2e3deb0bdbe3b59978f4b377f9207"
+    },
+    {
+      "label": "MATLAB — MathWorks",
+      "url": "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=cc932c36-e8b0-44c1-9f1a-93a4d513104d&"
+    },
+    {
+      "label": "ANSYS Workbench",
+      "url": "https://www.udemy.com/certificate/UC-2a731cc1-c068-4074-9d06-076b9ca592ec/"
+    },
+    {
+      "label": "Python",
+      "url": "https://www.udemy.com/certificate/UC-d4ba58b9-5da8-4f9d-a312-d15f128d7dc2/"
+    }
+  ],
+  "cadModels": [
+    {
+      "title": "Chain-Link Mechanism",
+      "focus": "Assembly motion",
+      "image": "assets/cad-chain-link.webp",
+      "imageAlt": "SolidWorks assembly render of a multi-link mechanical chain",
+      "description": "A constrained multi-component SolidWorks assembly exploring link geometry, pin connections, mating strategy, and articulated motion.",
+      "url": "https://grabcad.com/sri.harish.singaravelan-1/models"
+    },
+    {
+      "title": "AirPods CAD Model",
+      "focus": "Surface modeling",
+      "image": "assets/cad-airpods.webp",
+      "imageAlt": "Rendered CAD model of a pair of wireless earbuds",
+      "description": "A consumer-product form study focused on smooth surfaces, compact geometry, symmetry, and presentation-quality rendering.",
+      "url": "https://grabcad.com/sri.harish.singaravelan-1/models"
+    }
   ]
 };
