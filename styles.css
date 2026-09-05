@@ -309,7 +309,8 @@ button {
   justify-self: end;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
+  align-self: start;
 }
 
 .hero-visual::before {
@@ -330,7 +331,7 @@ button {
   color: var(--white);
   background: var(--ink);
   box-shadow: var(--shadow);
-  flex: 1;
+  flex: none;
   display: flex;
   flex-direction: column;
 }
