@@ -3,7 +3,7 @@ window.PORTFOLIO_DATA = {
   "profile": {
     "name": "Sri Harish Singaravelan",
     "initials": "SH",
-    "eyebrow": "Mechanical Engineer · Mechatronics · Automation",
+    "eyebrow": "Mechanical Design · Mechatronics Engineer · Robotics",
     "headline": "A systems-minded builder with a mechanical foundation.",
     "location": "Boston, USA",
     "email": "sriharish1108@gmail.com",
